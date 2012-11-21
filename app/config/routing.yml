@@ -2,9 +2,9 @@ main:
     resource: "@MainBundle/Resources/config/routing.yml"
     prefix:   /
 
-#_user_bundle:
- #   resource: "@UserBundle/Resources/config/routing.yml"
-  #  type: annotation
+user_routes:
+    resource: "@UserBundle/Controller"
+    type: annotation
 
 # Internal routing configuration to handle ESI
 #_internal:

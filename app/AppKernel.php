@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Dima\MainBundle\MainBundle(),
             new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle(),
             new WhiteOctober\PagerfantaBundle\WhiteOctoberPagerfantaBundle(),
+            new \Dima\UserBundle\UserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
