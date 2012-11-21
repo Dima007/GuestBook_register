@@ -1,0 +1,31 @@
+{% extends "::base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('bundles/main/css/bootstrap.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('bundles/main/css/main.css') }}"/>
+{% endblock %}
+
+    {% block body %}
+        <div class="container">
+            <header>
+                <div class="row">
+                    <div class="span3"><a href="{{ path('guest_book_homepage') }}"><H1>GuestBook</H1></a></div>
+                </div>
+            </header>
+            <HR>
+            {% block content %}
+            {% endblock %}
+            <HR>
+            <footer>
+                <div class="row">
+                    <div class="span9"><strong>GeekHub</strong></div>
+                    <div class="span3">
+                        <address>
+                            <strong>Rymar D.</strong><br>
+                            <a href="mailto:#">dimarymar@gmail.com</a>
+                        </address>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    {% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'MainBundle::layout.html.twig' %}
+
+{% block title "GuestBook | index" %}
+
+    {% block content %}
+
+        <form action="{{ path('post_create') }}" method="post" {{ form_enctype(form) }}>
+            {{ form_row(form.name) }}
+            {{ form_row(form.email) }}
+            {{ form_rest(form) }}
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+        <hr>
+        {{ pagerfanta(my_pager,'twitter_bootstrap') }}
+        <div class="row">
+            <div class="span16 posts">
+                {% for entity in entities %}
+                    <div class="post_content">
+                        <span class="label label-info">{{ entity.id }}</span>
+                        <span class="label label-info">{{ entity.name }}</span>
+                        <span class="label label-info">{{ entity.email }}</span>
+
+                        <div class="post">
+                            {{ entity.body }}
+                        </div>
+                        <ul class="breadcrumb br-margin">
+                            <li>
+                                <a href="{{ path('post_show', { 'id': entity.id }) }}">Show</a> <span
+                                    class="divider">/</span>
+                            </li>
+                            <li>
+                                <a href="{{ path('post_edit', { 'id': entity.id }) }}">edit</a> <span
+                                    class="divider">/</span>
+                            </li>
+                            <li>
+                                <a href="{{ path('post_delete', {'id': entity.id}) }}">Delete</a>
+                            </li>
+                        </ul>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}

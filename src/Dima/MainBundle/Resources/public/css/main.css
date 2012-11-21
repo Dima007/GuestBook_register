@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.posts {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 10px #AAAAAA;
+    margin: 10px auto;
+    position: relative;
+    width: 940px;
+    height:250px;
+    overflow: scroll;
+    margin-left: 20px;
+}
+hr {
+    border-color: #000000;
+    margin: 3px 0;
+}
+.text-area-text {
+    width: 542px;
+}
+.table {
+    width: 850px;
+    word-wrap: break-word
+}
+.post_content {
+    border: 1px solid #DDDDDD;
+    width: 96%;
+    border-radius: 10px;
+    font: 11px Verdana;
+    margin: 10px;
+    padding: 0 8px 5px;
+}
+.post {
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    clear: both;
+    color: #000000;
+    font: 13px Verdana;
+    margin-bottom: 0;
+    width: 865px;
+    padding: 10px;
+    text-align: left;
+    word-wrap: break-word;
+
+}
+
+.br-margin {
+    margin: 0 0 5px;
+}
+
+.pagination {
+    margin: 5px 0;
+}
+
+address {
+    margin-bottom: 5px;
+}

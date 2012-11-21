@@ -1,0 +1,27 @@
+{% extends 'MainBundle::layout.html.twig' %}
+
+
+{% block title "GuestBook | edit" %}
+
+
+    {% block content %}
+        <form action="{{ path('post_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
+            {{ form_widget(edit_form) }}
+            <p>
+                <button type="submit">Edit</button>
+            </p>
+        </form>
+
+        <ul class="record_actions">
+            <li>
+                <a href="{{ path('guest_book_homepage') }}">
+                    Back to the list
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ path('post_delete', {'id': entity.id}) }}">Delete</a>
+            </li>
+        </ul>
+
+    {% endblock %}

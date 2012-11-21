@@ -1,0 +1,7 @@
+_default_import:
+    resource: routing/default.yml
+
+MainBundle_post:
+    resource: "@MainBundle/Resources/config/routing/post.yml"
+    prefix: /post
+

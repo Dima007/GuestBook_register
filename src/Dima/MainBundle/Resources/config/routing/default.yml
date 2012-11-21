@@ -1,0 +1,7 @@
+guest_book_homepage:
+    pattern:  /{page}
+    defaults: { _controller: MainBundle:Post:index, page:1 }
+
+guest_book_homepage_pages:
+    pattern:  /post/page/{page}
+    defaults: { _controller: MainBundle:Post:index, page: 1 }
